@@ -7,8 +7,13 @@
  */
  @tailwind preflight;
 
- 
+html{
+	scroll-behavior: smooth;
+}
 
+.page-content{
+
+}
 /*-------------------------------*/
 /*end*/
 
