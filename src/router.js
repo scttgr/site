@@ -9,40 +9,31 @@ const router = new Router({
     {
       path: '/',
       component: () => import(/* webpackChunkName: "bases" */ './views/Home.vue'),
-      meta: { requiresAuth: true },
+    },
+    {
+      path: '/release',
+      component: () => import(/* webpackChunkName: "release" */ './views/Release.vue'),
+    },
+    {
+      path: '/contact',
+      component: () => import(/* webpackChunkName: "contact" */ './views/Contact.vue'),
     },
     {
       path: '*',
       component: () => import(/* webpackChunkName: "bases" */ './views/NotFound.vue'),
     },
   ],
-  // scrollBehavior(to, from, savedPosition) {
-  //   if (savedPosition) {
-  //     return new Promise((resolve) => {
-  //       setTimeout(() => {
-  //         resolve(savedPosition)
-  //       }, 500)
-  //     })
-  //   } else {
-  //     return {x: 0, y: 0}
-  //   }
-  // },
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(savedPosition)
+        }, 500)
+      })
+    } else {
+      return {x: 0, y: 0}
+    }
+  },
 })
-
-// router.beforeEach((to, from, next) => {
-//   if (to.matched.some(record => record.meta.requiresAuth)) {
-//     if (router.app.$store.getters['auth/isLoaded']) {
-//       const user = router.app.$store.getters['auth/user']
-//       next(user ? undefined : { name: 'sign-in', query: { redirect: to.fullPath } })
-//     } else {
-//       const unwatch = router.app.$store.watch(state => state.auth.user, user => {
-//         unwatch()
-//         next(user ? undefined : { name: 'sign-in', query: { redirect: to.fullPath } })
-//       })
-//     }
-//   } else {
-//     next()
-//   }
-// })
 
 export default router

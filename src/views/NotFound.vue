@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <section class="flex items-center justify-center w-full h-screen">
-      <div class="text-5xl font-mono font-bold">
-        404
-      </div>
-    </section>
+  <div class="flex items-center justify-center flex-grow">
+    <div class="text-5xl font-mono font-bold">
+      404
+    </div>
   </div>
 </template>
