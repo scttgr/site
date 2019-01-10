@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import VueAnalytics from 'vue-analytics'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ const router = new Router({
       return {x: 0, y: 0}
     }
   },
+})
+
+Vue.use(VueAnalytics, {
+  id: 'UA-131902923-1',
+  router,
 })
 
 export default router
