@@ -4,18 +4,21 @@ export default {
   namespaced: true,
   state() {
     return {
-      repos: [
-        'SCTTGR001',
+      release: [
+        {
+          repo: 'SCTTGR001',
+          soundcloud: 'playlists/668044188',
+        },
       ],
       data: [],
     }
   },
   getters: {
     list(state) {
-      return state.repos.map((repo, index) => {
+      return state.release.map((item, index) => {
         return {
-          repo,
-          key: repo,
+          key: item.repo,
+          ...item,
           body: state.data[index] || null,
         }
       }).filter(repo => repo.body != null)
@@ -23,8 +26,8 @@ export default {
   },
   actions: {
     initialize({ commit, state }) {
-      const promise = state.repos.map(repo => {
-        return axios.get(`https://raw.githubusercontent.com/scttgr/${repo}/master/README.md`)
+      const promise = state.release.map(item => {
+        return axios.get(`https://raw.githubusercontent.com/scttgr/${item.repo}/master/README.md`)
           .then(response => response.data, error => null)
       })
       Promise.all(promise)

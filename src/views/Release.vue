@@ -5,7 +5,8 @@
       <div v-for="item in list" :key="item.key" class="mb-10">
         <div class="flex flex-wrap -mx-3">
           <div class="mb-6 px-3 w-full md:w-1/2">
-            <img clas="max-w-full" :src="`https://raw.githubusercontent.com/scttgr/${item.repo}/master/banner.jpg`" alt="">
+            <img class="w-full mb-3" :src="`https://raw.githubusercontent.com/scttgr/${item.repo}/master/banner.jpg`" alt="">
+            <iframe v-if="item.soundcloud" width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" :src="`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/${item.soundcloud}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true`"></iframe>
           </div>
           <vue-markdown class="mb-6 px-3 w-full md:w-1/2 readme" :source="item.body"></vue-markdown>
         </div>
