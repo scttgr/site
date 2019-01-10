@@ -1,6 +1,12 @@
 import Vue from 'vue'
+import VueAnalytics from 'vue-analytics'
 import App from './App.vue'
+import store from '@/store'
 import router from '@/router'
+
+Vue.use(VueAnalytics, {
+  id: 'UA-131902923-1'
+})
 
 Vue.config.productionTip = false
 
@@ -13,6 +19,7 @@ if (redirect != undefined) {
 }
 
 new Vue({
+  store,
   router,
   render: h => h(App),
 }).$mount('#app')
