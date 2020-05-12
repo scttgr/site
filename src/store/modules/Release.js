@@ -9,6 +9,10 @@ export default {
           repo: 'SCTTGR001',
           soundcloud: 'playlists/668044188',
         },
+        {
+          repo: 'SCTTGR002',
+          bandcamp: '2053228825',
+        },
       ],
       data: [],
     }
