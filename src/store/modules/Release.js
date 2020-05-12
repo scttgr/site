@@ -7,11 +7,15 @@ export default {
       release: [
         {
           repo: 'SCTTGR001',
-          soundcloud: 'playlists/668044188',
+          bandcamp: '1418532272',
         },
         {
           repo: 'SCTTGR002',
           bandcamp: '2053228825',
+        },
+        {
+          repo: 'SCTTGR003',
+          bandcamp: '4112615984',
         },
       ],
       data: [],
