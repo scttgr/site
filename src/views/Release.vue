@@ -4,12 +4,12 @@
     <div>
       <div v-for="item in list" :key="item.key" class="mb-10">
         <div class="flex flex-wrap -mx-3">
-          <div class="mb-6 px-3 w-full md:w-1/2">
+          <div class="mb-6 px-8 w-full md:w-1/2">
             <img class="w-full mb-3" :src="`https://raw.githubusercontent.com/scttgr/${item.repo}/master/banner.jpg`" alt="">
             <iframe v-if="item.soundcloud" width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" :src="`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/${item.soundcloud}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true`"></iframe>
-            <iframe v-if="item.bandcamp" width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" :src="`https://bandcamp.com/EmbeddedPlayer/album=${item.bandcamp}/size=large/artwork=small/transparent=true/`"></iframe>
+            <iframe v-if="item.bandcamp" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" :src="`https://bandcamp.com/EmbeddedPlayer/album=${item.bandcamp}/size=large/artwork=small/transparent=true/`"></iframe>
           </div>
-          <vue-markdown class="mb-6 px-3 w-full md:w-1/2 readme" :source="item.body"></vue-markdown>
+          <vue-markdown class="mb-6 px-8 w-full md:w-1/2 readme" :source="item.body"></vue-markdown>
         </div>
       </div>
     </div>
@@ -45,7 +45,7 @@ export default {
   @apply leading-normal;
 }
 .readme >>> h1 {
-  @apply mb-3 text-xl;
+  @apply mb-3 text-3xl;
 }
 .readme >>> h2 {
   @apply mt-3 mb-2 text-lg;
