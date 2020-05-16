@@ -17,6 +17,10 @@ export default {
           repo: 'SCTTGR003',
           bandcamp: '4112615984',
         },
+        {
+          repo: 'SCTTGR004',
+          bandcamp: '3032592115',
+        },
       ],
       data: [],
     }
