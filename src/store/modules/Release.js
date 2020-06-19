@@ -6,6 +6,18 @@ export default {
     return {
       release: [
         {
+          repo: "SCTTGR008",
+          bandcamp: "2686842758"
+        },
+        {
+          repo: "SCTTGR007",
+          bandcamp: "3698555740"
+        },
+        {
+          repo: "SCTTGR006",
+          bandcamp: "2631267255"
+        },
+        {
           repo: "SCTTGR005",
           bandcamp: "2720666632"
         },
